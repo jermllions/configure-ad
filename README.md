@@ -30,7 +30,12 @@ This project builds on an existing Active Directory environment deployed in Micr
 
 
 
-
+Key Actions
+- Step  Create Organizational Units for Employees and Admins
+- Step Create Organizational Units for Employees and Admins
+- Step Join client VM to the domain
+- Step Configure Remote Desktop access for domain users
+- Automate bulk user creation with PowerShell
 
 
 
