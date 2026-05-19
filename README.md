@@ -87,6 +87,73 @@ In the search bar, type "VM", select Virtual Machines and press "+ Create" and s
 
 
 
+
+
+
+Next Restart "vm-client-1" within the Azure Portal by going to your vm list. Mark the checkbox for "vm-client-1" and select "Restart" near the top.While on this screen, copy/note "vm-client'1" Public IP Address, we'll need it to Login.
+
+
+
+<img width="1534" height="594" alt="image" src="https://github.com/user-attachments/assets/1c60a06a-ebaf-4365-afbf-9a7910df135a" />
+
+
+
+Next On your local computer (Windows or macOS), open another instance of Remote Desktop client and connect to the VM Client 1 using public IP address, you'll be prompted to enter your credentials you created when creating this VM. Next prompt, select yes, and your VM Client 1 will now boot. Open PowerShell and attempt to ping your Domain Controller's Private IP Address. Ensure the ping the succeded, run ipconfig /all. The output for DNS Settings should now show "vm-dc-1"'s Private IP Address.
+
+
+
+<img width="643" height="727" alt="image" src="https://github.com/user-attachments/assets/b0b9b95d-efec-47f8-88e8-416e5ef8561c" />
+
+
+
+
+
+<h1>5. <h1>INSTALL ACTIVE DIRECTORY<h1>
+
+
+
+Return to our Domain Controller from Step 3. View or Open "Server Manager > Dashboard". Select option 2. Add roles and features. Select "Next" 3 times, until we arrive at "Server Roles". Here select "Active Directory Domain Services". Select "Next" 3 times again. On the Confirmation screen, mark the checkbox "Restart the destination server automatically..." , and select "Install".
+
+
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/2770e109-d80d-4330-830a-a396273f40d9" />
+
+
+
+Once feature is finsihed installing, select "Close". On your Server Manager Dashboard, select the notifications icon.
+
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/85f7871f-368a-4e18-aa12-10c8655275e0" />
+
+
+
+ From here, select "Promote this server to a domain controller". In the Domain Configuration screen, select "Add a new forest" and in Root domain name field, type "mydomain.com". (you may name the forest anything) Select "Next", in the Domain Controller Options, you will need to set the DSRM Password here. Select "Next", be sure to unmark the DNS Delegation checkbox here, select 4 more times from here, and lastly "Install". The VM will install the new forest and will sign out automatically.
+
+
+ <img width="762" height="552" alt="image" src="https://github.com/user-attachments/assets/2c2bb434-5a4d-4a5e-af97-d216318c08db" />
+
+
+
+
+
+ Once signed out, RDP will restart for the VM, select "More Options" and clear the username field, and enter mydomain.com\<yourcreatedcredentials> and password.
+
+
+ <img width="399" height="495" alt="image" src="https://github.com/user-attachments/assets/c60f86d0-4e42-4052-bdfc-f21f10277a6e" />
+
+
+
+
+
+ Once logged back into the Domain Controller, we can review the Server Manager Dashboard and verify that the Active Directory Domain Services and DNS roles are installed and running!
+
+
+
+
+ <img width="1527" height="736" alt="image" src="https://github.com/user-attachments/assets/1b508cc4-8957-4479-bf49-a9b4f7f1b7db" />
+
+
+
+
+
    
 
 
