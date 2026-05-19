@@ -53,3 +53,14 @@ Log into Azure Portal, and in the search bar type "Resource Groups", select Reso
 
 
 
+
+2.  <h1>CREATE VIRTUAL NETWORK <h1>
+In the search bar, type "Virtual Networks", select Virtual Networks and press "+ Create" to start creation of your Virtual Network. Select the resource group we just made and name your virtual network "vnet-ad-lab", select "Review + Create" and finally "Create".
+
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/6cb2e69a-9e74-46ef-aedd-9940b27d19a3" />
+
+
+
+
+
+
