@@ -63,4 +63,13 @@ In the search bar, type "Virtual Networks", select Virtual Networks and press "+
 
 
 
+ 3.  <h1>CREATE VM DOMAIN CONTROLLER <h1>
+
+   In the search bar, type "VM", select Virtual Machines and press "+ Create" and select "Virtual Machines" to start creation of your Virtual Machine. Select the "rg-ad-lab" as the resource group, name your vm "vm-dc-1". For Image, select "Windows Server 2022, Datacenter: Azure Edition - x64 Gen2" For Size, select any with 2 VCPUs and at least 16 GB Ram. Set your username and password in the Admin Account section. Near the bottom, select "Next : Disk >" continue on to "Next : Networking
+
+
+
+
+
+
 
